@@ -7,13 +7,13 @@ public class Main {
 
     public static void main(String[] args) {
         String r = "";
-        int nb;
+        String nb = "";
 
         do {
             do {
                 nb = getNumber();
-            } while (nb < 10000 || nb > 99999);
-            r = make_string(nb);
+            } while (!nb.matches("\\d\\d\\d\\d\\d"));
+            r = make_string(Integer.parseInt(nb));
             System.out.printf("Résultat : %s%n", r);
         } while(!r.equals("====="));
         System.out.println("Gagné !");
@@ -44,16 +44,16 @@ public class Main {
             return '?';
     }
 
-    public  static int getNumber(){
-        int n;
+    public  static String getNumber(){
+        String n;
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Tapez un nombre à 5 chiffres : ");
-        n = sc.nextInt();
-        if(n < 10000){
+        n = sc.nextLine();
+        if(n.length() < 5){
             System.out.println("Nombre trop petit. Recommencez.");
         }
-        if(n > 99999){
+        if(n.length() > 5){
             System.out.println("Nombre trop grand. Recommencez.");
         }
         return n;

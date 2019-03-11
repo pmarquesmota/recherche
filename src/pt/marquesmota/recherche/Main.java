@@ -1,13 +1,19 @@
 package pt.marquesmota.recherche;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
-    static String x = "55555";
+    static String x = "";
 
     public static void main(String[] args) {
         String r = "";
         String nb = "";
+        
+        Random rand = new Random();
+        for (int i = 0; i<5; i++) {
+        	x = x + Integer.toString(rand.nextInt(9));
+        }
 
         do {
             do {
@@ -29,7 +35,7 @@ public class Main {
             chiffre_public = n.substring(i, i + 1);
             resultat = resultat + compare(Integer.parseInt(chiffre_secret), Integer.parseInt(chiffre_public));
         }
-        return new StringBuilder(resultat).reverse().toString();
+        return resultat;
     }
 
     public static char  compare(int a, int b){

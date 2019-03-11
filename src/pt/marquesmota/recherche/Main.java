@@ -3,7 +3,7 @@ package pt.marquesmota.recherche;
 import java.util.Scanner;
 
 public class Main {
-    static int x = 55555;
+    static String x = "55555";
 
     public static void main(String[] args) {
         String r = "";
@@ -13,20 +13,21 @@ public class Main {
             do {
                 nb = getNumber();
             } while (!nb.matches("\\d\\d\\d\\d\\d"));
-            r = make_string(Integer.parseInt(nb));
+            r = make_string(nb);
             System.out.printf("Résultat : %s%n", r);
         } while(!r.equals("====="));
         System.out.println("Gagné !");
     }
 
-    public static String make_string(int n){
+    public static String make_string(String n){
         String resultat = "";
-        int chiffre_secret = x;
-        int chiffre_public = n;
+        String chiffre_secret;
+        String chiffre_public;
+        
         for(int i=0;i<5;i++){
-            resultat = String.format("%s%s", resultat, compare(chiffre_secret%10, chiffre_public%10));
-            chiffre_secret /= 10;
-            chiffre_public /= 10;
+            chiffre_secret = x.substring(i, i + 1);
+            chiffre_public = n.substring(i, i + 1);
+            resultat = resultat + compare(Integer.parseInt(chiffre_secret), Integer.parseInt(chiffre_public));
         }
         return new StringBuilder(resultat).reverse().toString();
     }

@@ -18,6 +18,9 @@ public class Main {
         do {
             do {
                 nb = getNumber();
+                if(!nb.matches("\\d\\d\\d\\d\\d")) {
+                	System.out.println("Veuillez saisir un nombre à 5 chiffres");
+                }
             } while (!nb.matches("\\d\\d\\d\\d\\d"));
             r = make_string(nb);
             System.out.println("Résultat : " + r);

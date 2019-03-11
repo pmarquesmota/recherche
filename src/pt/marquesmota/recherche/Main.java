@@ -14,7 +14,7 @@ public class Main {
                 nb = getNumber();
             } while (!nb.matches("\\d\\d\\d\\d\\d"));
             r = make_string(nb);
-            System.out.printf("Résultat : %s%n", r);
+            System.out.println("Résultat : " + r);
         } while(!r.equals("====="));
         System.out.println("Gagné !");
     }

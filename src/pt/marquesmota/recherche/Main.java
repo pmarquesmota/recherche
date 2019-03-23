@@ -22,37 +22,12 @@ public class Main {
                 	System.out.println("Veuillez saisir un nombre à 5 chiffres");
                 }
             } while (!nb.matches("\\d\\d\\d\\d\\d"));
-            r = make_string(nb);
+            r = Engine.make_string(x, nb);
             System.out.println("Résultat : " + r);
         } while(!r.equals("====="));
         System.out.println("Gagné !");
     }
 
-    public static String make_string(String n){
-        String resultat = "";
-        String chiffre_secret;
-        String chiffre_public;
-        
-        for(int i=0;i<5;i++){
-            chiffre_secret = x.substring(i, i + 1);
-            chiffre_public = n.substring(i, i + 1);
-            resultat = resultat + compare(Integer.parseInt(chiffre_secret), Integer.parseInt(chiffre_public));
-        }
-        return resultat;
-    }
-
-    public static char  compare(int a, int b){
-            if(a>b){
-                return '+';
-            }
-            if(a<b) {
-                return '-';
-            }
-            if(a==b) {
-                return '=';
-            }
-            return '?';
-    }
 
     public  static String getNumber(){
         String n;

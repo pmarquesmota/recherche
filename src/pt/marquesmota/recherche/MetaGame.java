@@ -15,7 +15,7 @@ public class MetaGame {
 		}
 	}, new GameRun() {
 		public Game create() {
-			return new Plus_ou_moins_défenseur();
+			return new Plus_ou_moins_defenseur();
 		}
 	}, new GameRun() {
 		public Game create() {
@@ -27,7 +27,7 @@ public class MetaGame {
 		}
 	}, new GameRun() {
 		public Game create() {
-			return new Mastermind_défenseur();
+			return new Mastermind_defenseur();
 		}
 	}, new GameRun() {
 		public Game create() {

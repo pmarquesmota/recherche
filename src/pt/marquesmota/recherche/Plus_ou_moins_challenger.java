@@ -14,7 +14,7 @@ public class Plus_ou_moins_challenger extends Plus_ou_moins{
         }
 
         do {
-            nb = Choose.choice("Veuillez saisir un nombre à 4 chiffres");
+            nb = Choose.choice("Veuillez saisir un nombre à 5 chiffres");
             r = Engine.make_string(x, nb);
             System.out.println("Résultat : " + r);
         } while(!r.equals("====="));

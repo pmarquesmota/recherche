@@ -1,45 +1,64 @@
 package pt.marquesmota.recherche;
 
 public class Engine {
-	public static Result guess(Result r) {
-        String resultat = "";
+	public static String guess(String g, String resultat) {
 		String guess_digit;
-		String hint_letter;
+		char result_letter;
+		String result_guess = "";
 		
-		if(r.getGuess == "") {
-			return "55555";
+		
+		if (resultat == "") {
+			for (int i=0; i<MetaGame.length;i++) {
+				result_guess = result_guess +"0";
+			}
+			return result_guess;
 		}
-		for(int i=0;i<5;i++){
-			guess_digit = oldguess.substring(i, i + 1);
-			hint_letter = hint.substring(i, i + 1);
-            resultat = resultat + guess_digit(Integer.parseInt(guess_digit), hint_letter);
-        }
+		for (int i = 0; i < MetaGame.length; i++) {
+			guess_digit = g.substring(i, i + 1);
+			result_letter = resultat.charAt(i);
+			result_guess = result_guess + guess_digit(Integer.parseInt(guess_digit), result_letter);
+		}
+		return result_guess;
 	}
-	
-    public static String make_string(String private_string, String public_string){
-        String resultat = "";
-        String chiffre_secret;
-        String chiffre_public;
-        
-        for(int i=0;i<5;i++){
-            chiffre_secret = private_string.substring(i, i + 1);
-            chiffre_public = public_string.substring(i, i + 1);
-            resultat = resultat + compare(Integer.parseInt(chiffre_secret), Integer.parseInt(chiffre_public));
-        }
-        return resultat;
-    }
 
-    public static char  compare(int a, int b){
-            if(a>b){
-                return '+';
-            }
-            if(a<b) {
-                return '-';
-            }
-            if(a==b) {
-                return '=';
-            }
-            return '?';
-    }
+	public static String guess_digit(int g, char r) {
+		switch (r) {
+		case '+':
+			g++;
+			break;
+		case '-':
+			g--;
+			break;
+		case '=':
+			break;
+		}
+		return Integer.toString(g);
+	}
+
+	public static String make_string(String private_string, String public_string) {
+		String resultat = "";
+		String chiffre_secret;
+		String chiffre_public;
+
+		for (int i = 0; i < MetaGame.length; i++) {
+			chiffre_secret = private_string.substring(i, i + 1);
+			chiffre_public = public_string.substring(i, i + 1);
+			resultat = resultat + compare(Integer.parseInt(chiffre_secret), Integer.parseInt(chiffre_public));
+		}
+		return resultat;
+	}
+
+	public static char compare(int a, int b) {
+		if (a > b) {
+			return '+';
+		}
+		if (a < b) {
+			return '-';
+		}
+		if (a == b) {
+			return '=';
+		}
+		return '?';
+	}
 
 }

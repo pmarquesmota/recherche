@@ -7,17 +7,22 @@ public class Plus_ou_moins_challenger extends Plus_ou_moins{
         String r = "";
         String nb = "";
         String x = "";
+        String result_guess = "";
         
+        for (int i=0; i<MetaGame.length;i++) {
+        	result_guess = result_guess + "=";
+        }
+
         Random rand = new Random();
-        for (int i = 0; i<4; i++) {
+        for (int i = 0; i<MetaGame.length; i++) {
         	x = x + Integer.toString(rand.nextInt(9));
         }
 
         do {
-            nb = Choose.choice("Veuillez saisir un nombre à 5 chiffres");
+            nb = Choose.choice("Veuillez saisir un nombre à " + MetaGame.length + " chiffres");
             r = Engine.make_string(x, nb);
             System.out.println("Résultat : " + r);
-        } while(!r.equals("====="));
+        } while(!r.equals(result_guess));
         System.out.println("Gagné !");
 	}
 

@@ -1,7 +1,8 @@
 package pt.marquesmota.recherche;
 
 public class MetaGame {
-
+	public static int length = 4;
+	
 	public static void run() {
 		int jeu = Choose.menu("Choisissez votre jeu\n1 - plus ou moins\n2 - mastermind", 1, 2);
 		int mode = Choose.menu("Choisissez votre mode\n1 - challenger\n2 - défenseur\n3 - duel", 1, 3);

@@ -65,5 +65,16 @@ public abstract class Mastermind extends Game{
 		return resultat;
 	}
 
+	public static String getSecret() {
+		String computer_secret = "";
+		
+        Random rand = new Random();
+        for (int i = 0; i<MetaGame.length; i++) {
+        	computer_secret = computer_secret + Integer.toString(rand.nextInt(MetaGame.mastermind_width));
+        }
+
+        return computer_secret;
+	}
+
 	public abstract void run();
 }

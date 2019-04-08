@@ -2,6 +2,7 @@ package pt.marquesmota.recherche;
 
 public class MetaGame {
 	public static int length = 4;
+	public static int mastermind_width = 3;
 	
 	public static String getResult() {
 		String r = "";

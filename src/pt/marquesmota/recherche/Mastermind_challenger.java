@@ -4,5 +4,4 @@ public class Mastermind_challenger extends Mastermind{
 	public void run() {
 		
 	}
-
 }

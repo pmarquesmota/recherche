@@ -1,5 +1,7 @@
 package pt.marquesmota.recherche;
 
+import java.util.Random;
+
 public class Engine {
 	public static String guess(String g, String resultat) {
 		String guess_digit;
@@ -61,4 +63,14 @@ public class Engine {
 		return '?';
 	}
 
+	public static String getSecret() {
+		String computer_secret = "";
+		
+        Random rand = new Random();
+        for (int i = 0; i<MetaGame.length; i++) {
+        	computer_secret = computer_secret + Integer.toString(rand.nextInt(9));
+        }
+
+        return computer_secret;
+	}
 }

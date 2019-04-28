@@ -13,7 +13,9 @@ public class Plus_ou_moins_duel  extends Plus_ou_moins{
 		result_guess = MetaGame.getResult();
         player_secret = Choose.choice("Veuillez saisir un nombre secret à " + MetaGame.length + " chiffres");
         computer_secret = Engine.getSecret();
-
+        if(MetaGame.dev) {
+        	System.out.println("Le nombre secret est : " + computer_secret);
+        }
         do {
         	computer_play();
         	player_play();

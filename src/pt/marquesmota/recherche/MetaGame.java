@@ -1,8 +1,13 @@
 package pt.marquesmota.recherche;
 
+import java.io.IOException;
+import java.util.HashMap;
+
 public class MetaGame {
-	public static int length = 4;
+	public static int length;
 	public static int mastermind_width = 3;
+	public static HashMap<String, String> parameters;
+	public static boolean dev;
 	
 	public static String getResult() {
 		String r = "";
@@ -13,7 +18,11 @@ public class MetaGame {
         return r;
 	}
 	
-	public static void run() {
+	public static void run() throws IOException, FichierConfigurationException {
+		parameters = Parameters.getListeParametres();
+		length = Integer.parseInt(parameters.get("length"));
+		dev = Boolean.parseBoolean(parameters.get("dev"));
+		
 		int jeu = Choose.menu("Choisissez votre jeu\n1 - plus ou moins\n2 - mastermind", 1, 2);
 		int mode = Choose.menu("Choisissez votre mode\n1 - challenger\n2 - défenseur\n3 - duel", 1, 3);
 		Game game = null;

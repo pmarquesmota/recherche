@@ -17,7 +17,9 @@ public class Plus_ou_moins_challenger extends Plus_ou_moins{
         for (int i = 0; i<MetaGame.length; i++) {
         	x = x + Integer.toString(rand.nextInt(9));
         }
-
+        if(MetaGame.dev) {
+        	System.out.println("Le nombre secret est : " + x);
+        }
         do {
             nb = Choose.choice("Veuillez saisir un nombre à " + MetaGame.length + " chiffres");
             r = Engine.make_string(x, nb);

@@ -1,0 +1,28 @@
+2019-05-06 11:29:34,478 INFO r.j.Duel [main] Début du duel
+2019-05-06 11:29:34,478 INFO r.j.Duel [main] l'ordinateur essaie : 00
+2019-05-06 11:29:34,490 INFO r.j.Duel [main] Résultat : ++
+2019-05-06 11:29:39,149 INFO r.j.Duel [main] Le joueur a saisi : 55
+2019-05-06 11:29:39,149 INFO r.j.Duel [main] Résultat : --
+2019-05-06 11:29:39,164 INFO r.j.Duel [main] l'ordinateur essaie : 11
+2019-05-06 11:29:39,165 INFO r.j.Duel [main] Résultat : =+
+2019-05-06 11:29:45,438 INFO r.j.Duel [main] Le joueur a saisi : 22
+2019-05-06 11:29:45,438 INFO r.j.Duel [main] Résultat : --
+2019-05-06 11:29:45,438 INFO r.j.Duel [main] l'ordinateur essaie : 12
+2019-05-06 11:29:45,438 INFO r.j.Duel [main] Résultat : ==
+2019-05-06 11:29:55,655 INFO r.j.Duel [main] Le joueur a saisi : 11
+2019-05-06 11:29:55,671 INFO r.j.Duel [main] Résultat : =-
+2019-05-06 11:29:55,673 INFO r.j.Duel [main] L'ordinateur a gagné !
+2019-05-06 12:01:41,922 INFO r.j.Duel [main] Début du duel
+2019-05-06 12:01:41,922 INFO r.j.Duel [main] l'ordinateur essaie : 00
+2019-05-06 12:01:41,934 INFO r.j.Duel [main] Résultat : ++
+2019-05-06 12:01:46,465 INFO r.j.Duel [main] Le joueur a saisi : 55
+2019-05-06 12:01:46,465 INFO r.j.Duel [main] Résultat : --
+2019-05-06 12:01:46,473 INFO r.j.Duel [main] l'ordinateur essaie : 11
+2019-05-06 12:01:46,473 INFO r.j.Duel [main] Résultat : =+
+2019-05-06 12:01:57,999 INFO r.j.Duel [main] Le joueur a saisi : 22
+2019-05-06 12:01:57,999 INFO r.j.Duel [main] Résultat : +-
+2019-05-06 12:01:58,009 INFO r.j.Duel [main] l'ordinateur essaie : 12
+2019-05-06 12:01:58,010 INFO r.j.Duel [main] Résultat : ==
+2019-05-06 12:02:09,997 INFO r.j.Duel [main] Le joueur a saisi : 31
+2019-05-06 12:02:09,997 INFO r.j.Duel [main] Résultat : =-
+2019-05-06 12:02:10,001 INFO r.j.Duel [main] L'ordinateur a gagné !

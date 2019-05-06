@@ -16,6 +16,7 @@ public class Duel  extends Game {
 		log = MetaGame.getLogger();
 		result_guess = MetaGame.getResult();
         player_secret = Choose.choice("Veuillez saisir un nombre secret à " + MetaGame.length + " chiffres");
+        log.info("nombre secret du joueur : " + player_secret);
         computer_secret = Engine.getSecret();
         
         log.info("Début du duel");

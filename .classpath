@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+<<<<<<< HEAD
 	<classpathentry kind="src" output="target/classes" path="src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
@@ -26,4 +27,13 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
+=======
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="output" path="bin"/>
+>>>>>>> 341f936abf5d0666b4fccd8d03b450df09b5ce2d
 </classpath>
